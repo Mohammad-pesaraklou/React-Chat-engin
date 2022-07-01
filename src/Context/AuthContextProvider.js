@@ -1,9 +1,12 @@
 import React, { useState , useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../FireBase';
+
+export const authContext = React.createContext();
+
+
 const AuthContextProvider = ({children}) => {
 
-    const authContext = React.createContext();
 
     const [loading , setLoading] = useState(true);
     const [user , setUser] = useState(false);
